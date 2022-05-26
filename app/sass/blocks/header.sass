@@ -1,0 +1,131 @@
+.header
+	display: flex
+	justify-content: space-between
+	height: 65px
+	background-color: #fff
+	border-bottom: 1px solid $border
+	position: relative
+	@include media-breakpoint-down(md)
+		height: 45px
+	&__left
+		display: flex
+	&__logo
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0 25px
+		border-right: 1px solid $border
+		font-weight: 700
+		text-decoration: none
+		color: $textcolor
+		text-transform: uppercase
+		font-size: 13px
+	&__right
+		display: flex
+	&__search
+		width: 65px
+		height: 65px
+		background-image: url(../images/icons/search.svg)
+		background-position: center
+		background-size: 18px
+		background-repeat: no-repeat
+		cursor: pointer
+		border-left: 1px solid $border
+		@include media-breakpoint-down(md)
+			width: 45px
+			height: 45px
+	&__menu-burger
+		width: 65px
+		height: 65px
+		background-image: url(../images/icons/menu.svg)
+		background-position: center
+		background-size: 18px
+		background-repeat: no-repeat
+		cursor: pointer
+		border-left: 1px solid $border
+		transition: .1s ease
+		&.open
+			background-image: url(../images/icons/close.svg)
+		@include media-breakpoint-down(md)
+			width: 45px
+			height: 45px
+		@include media-breakpoint-up(md)
+			display: none
+	&__lang
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 65px
+		height: 65px
+		cursor: pointer
+		border-left: 1px solid $border
+		color: #aaaaaa
+		text-transform: uppercase
+		@include media-breakpoint-down(md)
+			width: 45px
+			height: 45px
+
+.menu
+	display: flex
+	align-items: center
+	padding-left: 25px
+	transition: all .1s ease
+	@include media-breakpoint-down(md)
+		position: absolute
+		opacity: 0
+		visibility: hidden
+		flex-direction: column
+		background-color: #fff
+		border-bottom: 1px solid $border
+		width: 100%
+		padding: 25px
+		right: 0
+		top: 45px
+		align-items: flex-end
+	&.show
+		opacity: 1
+		visibility: visible
+	&__item
+		text-decoration: none
+		text-transform: uppercase
+		font-size: 13px
+		color: $textcolor
+		&:not(&:last-child)
+			margin-right: 20px
+			padding-right: 20px
+			border-right: 1px solid $border
+			@include media-breakpoint-down(md)
+				margin-right: 0
+				padding-right: 0
+				border: none
+				padding: 5px 0
+
+.lang
+	position: absolute
+	right: 0
+	top: 65px
+	opacity: 0
+	visibility: hidden
+	transition: all .1s ease
+	&.open
+		opacity: 1
+		visibility: visible
+	@include media-breakpoint-down(md)
+		top: 45px
+		right: 45px
+	&__item
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 65px
+		height: 65px
+		text-decoration: none
+		text-transform: uppercase
+		background-color: #fff
+		border-left: 1px solid $border
+		border-bottom: 1px solid $border
+		color: #aaa
+		@include media-breakpoint-down(md)
+			width: 45px
+			height: 45px
+			border-right: 1px solid $border

@@ -1,0 +1,28 @@
+.wrapper
+	max-width: 1680px
+	padding: 84px
+	margin: 0 auto
+	@include media-breakpoint-down(lg)
+		padding: 0!important
+
+.main
+	display: flex
+	column-gap: 55px
+	@include media-breakpoint-down(xl)
+		flex-direction: column-reverse
+
+.button
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	padding: 0 30px
+	height: 50px
+	border: 1px solid $border
+	text-decoration: none
+	color: $dark
+	transition: all .2s ease
+	&:hover
+		border: 1px solid $link
+		color: $link
+	@include media-breakpoint-down(sm)
+		display: flex
