@@ -1,4 +1,5 @@
 // import '~/app/vendor/mmenu/dist/mmenu.js'
+import MicroModal from 'micromodal'
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -15,5 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		this.classList.toggle('open')
 		menuSearchContent.classList.toggle('open')
 	})
+
+	MicroModal.init({
+		awaitOpenAnimation: true,
+		awaitCloseAnimation: true
+	});
 
 })
