@@ -1,11 +1,17 @@
 .page
+	@include media-breakpoint-down(lg)
+		padding-top: 48px
 	&__head
 		background-color: #fff
 		border: 1px solid $border
 		border-bottom: none
 		padding: 55px
+		@include media-breakpoint-down(md)
+			padding: 45px
 	&__body
 		background-color: #fff
 		border: 1px solid $border
 		padding: 55px
 		min-height: 600px
+		@include media-breakpoint-down(md)
+			padding: 45px
